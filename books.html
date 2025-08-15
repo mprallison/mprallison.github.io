@@ -4,9 +4,9 @@
   <title>Generic HTML Table</title>
   <style>
     table {
-      width: 50%;
+      /* width: 50%; */
       border-collapse: collapse;
-      margin: 20px auto;
+      margin: none;
     }
     th, td {
       border: 1px solid #ccc;
@@ -18,31 +18,23 @@
     }
   </style>
 </head>
-<body>
+<body style="text-align: left;"></body>
 
   <table>
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>What I reckon</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>1</td>
-        <td>Alice Smith</td>
-        <td>alice@example.com</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Bob Johnson</td>
-        <td>bob@example.com</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Charlie Davis</td>
-        <td>charlie@example.com</td>
+        <td>The man who fell from grace with the sea</td>
+        <td>Yukio Mishima</td>
+        <td>pre 2025</td>
+        <td>Had to stop at one point because it was too distrubing</td>
       </tr>
     </tbody>
   </table>
