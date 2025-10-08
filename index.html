@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Matthew's page</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#129451;</text></svg>">
+  <link rel="icon" href="static/favicon.png" type="image/png">
 
   <style>
     :root {
@@ -49,7 +49,14 @@
       align-items: start;
     }
 
-    .left { display: flex; flex-direction: column; gap: 14px; }
+    .left { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; align-self: start;}
+
+    @media (max-width: 950px) { 
+    .left {
+        position: static;
+        top: auto; 
+    }
+}
 
     .photo { display: flex; align-items: flex-start; width: 100%; }
 
@@ -78,8 +85,9 @@
     }
 
     .btn {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       padding: 10px 16px;
       border-radius: 12px;
@@ -92,6 +100,7 @@
       box-shadow: 0 6px 18px rgba(12,18,30,0.04);
       text-align: center;
     }
+
 
     .btn.primary {
       background: linear-gradient(180deg,#0f172a,#0b1220);
@@ -185,29 +194,35 @@
       <aside class="left" aria-label="Profile">
         <div class="photo" role="img" aria-hidden="false">
           <span class="avatar">
-            <img src="me.png" alt="Matthew Rallison">
+            <img src="static/image.png" alt="Matthew Rallison">
           </span>
         </div>
 
         <div class="meta">
           <h1 id="page-title">Matthew Rallison</h1>
-          <div class="role">Data Scientist • Digital Health</div>
           <div class="location">Based in London</div>
 
-          <div class="actions" role="group" aria-label="Primary actions">
-            <a href="mailto:m.p.rallison@gmail.com" class="btn primary">✉ Contact</a>
-            <a class="btn primary" href="Matthew Rallison CV.pdf" target="_blank" download aria-label="Download CV">⬇ Download CV</a>
-          </div>
+        <div class="actions">
+            <a href="mailto:m.p.rallison@gmail.com" class="btn primary contact-btn">
+                <span class="text">
+                    ✉ Contact<br>
+                    <p style="font-size: 11px; margin: 0px;"><small>m.p.rallison@gmail.com</small></p>
+                </span>
+            </a>
+            <a class="btn primary" href="static/Matthew Rallison CV.pdf" target="_blank">
+                ⬇ Download CV
+            </a>
+        </div>
         </div>
       </aside>
 
       <section class="right" aria-label="Main content">
         <div class="bio" aria-labelledby="bio-heading">
           <h2>About</h2>
-          <p style="margin-left:10px;">
-            Data Scientist working in digital health.<br>
-            Currently supporting clinical decision support products.<br>
-            Strong on data modelling, semantic web and pipelines.<br>
+          <p style="margin-left:10px; margin-top: 15px">
+            Data Scientist in digital health.<br>
+            Currently working on clinical decision support products.<br>
+            Strong on data modelling, data pipelines and semantic web.<br>
             Getting better at web development and production environments.
           </p>
         </div>
@@ -237,10 +252,11 @@
 
         <section>
           <h2>MunrosWithFriends</h2>
-          <small class="muted" style="display:block; margin-bottom:8px; line-height:1.4;margin-right:30px;">
+          <small class="muted" style="display:block; margin-bottom:8px; line-height:1.4; margin: 15px 30px 15px 10px;">
             I am slowly building a web application for munro bagging. It's not the first, but I think it is the first to let you upload a custom map icon
             and create teams for a seamless view of who's bagged what when planning trips.<br>
-            <a href="https://app-76988021083.europe-west1.run.app/" target="_blank">Prototype site</a>
+            <a href="https://app-76988021083.europe-west1.run.app/" target="_blank">Try the prototype here</a>
+            <br><br>Follow my progress:
           </small>
 
           <div class="iframe-wrap" role="region" aria-label="Embedded preview">
@@ -248,7 +264,6 @@
           </div>
         </section>
       </section>
-
     </div>
 
     <footer>
