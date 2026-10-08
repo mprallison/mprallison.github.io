@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -19,7 +20,11 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
 
-    html, body { min-height: 100%; margin:0; }
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
 
     body {
       background: linear-gradient(180deg, var(--bg), #ffffff 50%);
@@ -37,7 +42,7 @@
       width: 100%;
       background: var(--card);
       border-radius: calc(var(--radius) + 6px);
-      box-shadow: 0 20px 20px rgba(12,18,30,0.08);
+      box-shadow: 0 20px 20px rgba(12, 18, 30, 0.08);
       padding: var(--container-pad);
       box-sizing: border-box;
     }
@@ -49,34 +54,69 @@
       align-items: start;
     }
 
-    .left { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; align-self: start;}
-
-    @media (max-width: 950px) { 
     .left {
-        position: static;
-        top: auto; 
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: sticky;
+      top: 20px;
+      align-self: start;
     }
-}
 
-    .photo { display: flex; align-items: flex-start; width: 100%; }
+    @media (max-width: 950px) {
+      .left {
+        position: static;
+        top: auto;
+      }
+    }
+
+    .photo {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+    }
 
     .avatar {
-      width: 180px; height: 180px;
+      width: 180px;
+      height: 180px;
       border-radius: 999px;
       overflow: hidden;
-      background: linear-gradient(180deg,#eef2ff,#ffffff);
-      border: 6px solid rgba(15,23,42,0.04);
-      box-shadow: 0 10px 30px rgba(10,20,40,0.07);
+      background: linear-gradient(180deg, #eef2ff, #ffffff);
+      border: 6px solid rgba(15, 23, 42, 0.04);
+      box-shadow: 0 10px 30px rgba(10, 20, 40, 0.07);
       flex-shrink: 0;
     }
 
-    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-    .meta { display: flex; flex-direction: column; gap: 6px; padding-top: 6px; }
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 6px;
+    }
 
-    h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
-    .role { margin: 0; color: var(--muted); font-size: 14px; }
-    .location { color: var(--muted); font-size: 13px; }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
     .actions {
       display: flex;
@@ -94,34 +134,55 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
-      border: 1px solid rgba(10,20,40,0.06);
-      background: linear-gradient(180deg,#ffffff,#fbfdff);
+      border: 1px solid rgba(10, 20, 40, 0.06);
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
       color: var(--accent);
-      box-shadow: 0 6px 18px rgba(12,18,30,0.04);
+      box-shadow: 0 6px 18px rgba(12, 18, 30, 0.04);
       text-align: center;
     }
 
     .btn:hover {
       transform: translateY(-4px);
-    } 
+    }
 
 
     .btn.primary {
-      background: linear-gradient(180deg,#0f172a,#0b1220);
+      background: linear-gradient(180deg, #0f172a, #0b1220);
       color: #fff;
       border: 0;
-      box-shadow: 0 10px 30px rgba(15,23,42,0.12);
-      max-width:100px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      max-width: 100px;
       height: 26px;
     }
 
-    .right { display: flex; flex-direction: column; gap: 16px; margin-right:30px;}
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-right: 30px;
+    }
 
-    .bio p { margin: 0; color: var(--muted); font-size: 15px; max-width: 75ch; }
+    .bio p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 75ch;
+    }
 
-    .right h2, .right h3 { margin: 0 0 8px 0; font-weight: 700; color: var(--accent); }
-    .right h2 { font-size: 18px; }
-    .right h3 { font-size: 16px; }
+    .right h2,
+    .right h3 {
+      margin: 0 0 8px 0;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .right h2 {
+      font-size: 18px;
+    }
+
+    .right h3 {
+      font-size: 16px;
+    }
 
     .links {
       display: grid;
@@ -136,7 +197,7 @@
       padding: 12px;
       border-radius: 10px;
       background: #F5F5F5;
-      border: 1px solid rgba(12,18,30,0.04);
+      border: 1px solid rgba(12, 18, 30, 0.04);
       text-decoration: none;
       color: var(--accent);
       min-height: 72px;
@@ -147,10 +208,12 @@
 
     .link-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(12,18,30,0.06);
+      box-shadow: 0 10px 25px rgba(12, 18, 30, 0.06);
     }
 
-    .link-card small { color: var(--muted); }
+    .link-card small {
+      color: var(--muted);
+    }
 
     .iframe-wrap {
       margin-top: 6px;
@@ -158,33 +221,62 @@
       overflow: hidden;
       aspect-ratio: 16 / 9;
       max-height: 380px;
-      border: 1px solid rgba(10,20,40,0.04);
+      border: 1px solid rgba(10, 20, 40, 0.04);
       background: #fff;
     }
 
-    .iframe-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
 
     footer {
       margin-top: 18px;
       padding-top: 10px;
-      border-top: 1px solid rgba(10,20,40,0.03);
+      border-top: 1px solid rgba(10, 20, 40, 0.03);
       color: var(--muted);
       font-size: 13px;
     }
 
-    .muted { color: var(--muted); }
+    .muted {
+      color: var(--muted);
+    }
 
     /* Mobile responsive adjustments */
     @media (max-width: 880px) {
-      .grid { grid-template-columns: 1fr; }
-      .photo { justify-content: center; }
-      .meta, .actions { text-align: center; justify-content: center; }
-      .actions { flex-wrap: wrap; }
-      .actions .btn { flex: 1 1 45%; min-width: 140px; margin-bottom: 8px; }
-      .links { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        justify-content: center;
+      }
+
+      .meta,
+      .actions {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .actions {
+        flex-wrap: wrap;
+      }
+
+      .actions .btn {
+        flex: 1 1 45%;
+        min-width: 140px;
+        margin-bottom: 8px;
+      }
+
+      .links {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="wrap" role="main" aria-labelledby="page-title">
     <div class="grid">
@@ -200,17 +292,17 @@
           <h1 id="page-title">Matthew Rallison</h1>
           <div class="location">Based in London</div>
 
-        <div class="actions">
+          <div class="actions">
             <a href="mailto:m.p.rallison@gmail.com" class="btn primary contact-btn">
-                <span class="text">
-                    ✉ Contact<br>
-                    <p style="font-size: 11px; margin: 0px;"><small>m.p.rallison@gmail.com</small></p>
-                </span>
+              <span class="text">
+                ✉ Contact<br>
+                <p style="font-size: 11px; margin: 0px;"><small>m.p.rallison@gmail.com</small></p>
+              </span>
             </a>
             <a class="btn primary" href="static/Matthew Rallison CV.pdf" target="_blank">
-                ⬇ Download CV
+              ⬇ Download CV
             </a>
-        </div>
+          </div>
         </div>
       </aside>
 
@@ -227,22 +319,26 @@
 
         <h2>Links</h2>
         <div class="links" role="list">
-          <a class="link-card" href="https://github.com/mprallison" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="link-card" href="https://github.com/mprallison" target="_blank" rel="noopener noreferrer"
+            role="listitem">
             <strong>GitHub</strong>
             <small class="muted">I make code public where possible</small>
           </a>
 
-          <a class="link-card" href="https://www.linkedin.com/in/matthew-rallison-39aaa8b0/" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="link-card" href="https://www.linkedin.com/in/matthew-rallison-39aaa8b0/" target="_blank"
+            rel="noopener noreferrer" role="listitem">
             <strong>LinkedIn</strong>
             <small class="muted">Sparsely attended</small>
           </a>
 
-          <a class="link-card" href="https://www.strava.com/athletes/121633340" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="link-card" href="https://www.strava.com/athletes/121633340" target="_blank"
+            rel="noopener noreferrer" role="listitem">
             <strong>Strava</strong>
             <small class="muted">Log of my running and sometimes swimming</small>
           </a>
 
-          <a class="link-card" href="https://www.goodreads.com/review/list/194431706?ref=nav_mybooks" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="link-card" href="https://www.goodreads.com/review/list/194431706?ref=nav_mybooks" target="_blank"
+            rel="noopener noreferrer" role="listitem">
             <strong>Goodreads</strong>
             <small class="muted">I like angsty fiction</small>
           </a>
@@ -251,8 +347,10 @@
         <section style="margin-top:10px;">
           <h2>munrosWithFriends</h2>
           <small class="muted" style="display:block; margin-bottom:8px; line-height:1.4; margin: 15px 30px 15px 10px;">
-            I built <a href="https://munroswithfriends.com" target="_blank">munroswithfriends.com</a>. It's not the first munro bagging app. But I think it is the first to let you upload a custom map icon
-            and create teams for a seamless view of who's bagged what when planning trips. V0.1 is live. Please join if you want.
+            I built <a href="https://munroswithfriends.com" target="_blank">munroswithfriends.com</a>. It's not the
+            first munro bagging app. But I think it is the first to let you upload a custom map icon
+            and create teams for a seamless view of who's bagged what when planning trips. V0.1 is live. Please join if
+            you want.
             <br><br>See my bagging progress:
           </small>
 
@@ -260,16 +358,19 @@
             <iframe src="https://munroswithfriends.com/map/matthew" title="Embedded preview"></iframe>
           </div>
         </section>
-      
+
         <section style="margin-top:10px;">
           <h2>gormleyBagger</h2>
           <small class="muted" style="display:block; margin-bottom:8px; line-height:1.4; margin: 15px 30px 15px 10px;">
-            Thought a nice little test of munrosWithFriends design would be to see how easily it pivots to generic map icon generation with Leaflet. In this case, Antony Gormley scultures. 
-            This <a href="https://github.com/mprallison/gormley-bagger/tree/main" target="_blank">code</a> is pretty flexible for any list of locations.
+            Thought a nice little test of munrosWithFriends design would be to see how easily it pivots to generic map
+            icon generation with Leaflet. In this case, Antony Gormley scultures.
+            This <a href="https://github.com/mprallison/gormley-bagger/tree/main" target="_blank">code</a> is pretty
+            flexible for any list of locations.
           </small>
 
           <div class="iframe-wrap" role="region" aria-label="Embedded preview">
-            <iframe src="https://raw.githack.com/mprallison/gormley-bagger/main/gormley_map.html" title="Embedded preview"></iframe>
+            <iframe src="https://raw.githack.com/mprallison/gormley-bagger/main/gormley_map_matthew.html"
+              title="Embedded preview"></iframe>
           </div>
         </section>
 
@@ -281,4 +382,5 @@
     </footer>
   </main>
 </body>
+
 </html>
